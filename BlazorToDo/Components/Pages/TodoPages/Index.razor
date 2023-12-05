@@ -1,0 +1,25 @@
+﻿@page "/todos"
+@rendermode InteractiveServer
+@using Microsoft.AspNetCore.Components.QuickGrid
+@inject BlazorToDo.Data.ApplicationDbContext DB
+@using BlazorToDo.Data.Models
+
+<PageTitle>To Do</PageTitle>
+
+<h1>Your To-Do List</h1>
+
+<p>
+    <a href="todos/create">Create New</a>
+</p>
+
+<QuickGrid Class="table" Items="DB.TodoList">
+    <PropertyColumn Property="todo => todo.Task" Sortable="true"/>
+    <PropertyColumn Property="todo => todo.DueDate" Title="Due Date" Format="dd/MM/yyyy" Sortable="true" />
+    <PropertyColumn Property="todo => todo.CreationTimestamp" Title="Creation Date" Format="dd/MM/yyyy" Sortable="true" />
+
+    <TemplateColumn Context="todo">
+        <a href="@($"todos/edit?id={todo.Id}")">Edit</a> |
+        <a href="@($"todos/details?id={todo.Id}")">Details</a> |
+        <a href="@($"todos/delete?id={todo.Id}")">Delete</a>
+    </TemplateColumn>
+</QuickGrid>

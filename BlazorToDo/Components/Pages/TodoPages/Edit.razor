@@ -1,0 +1,95 @@
+﻿@page "/Todos/edit"
+@inject BlazorToDo.Data.ApplicationDbContext DB
+@using BlazorToDo.Data.Models
+@inject NavigationManager NavigationManager
+@using Microsoft.EntityFrameworkCore
+
+<PageTitle>Edit</PageTitle>
+
+<h1>Edit</h1>
+
+<hr />
+@if (Todo is null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="row">
+        <div class="col-md-4">
+            <EditForm method="post" Model="Todo" OnValidSubmit="UpdateTodo" FormName="edit" Enhance>
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+                <input type="hidden" name="Todo.Id" value="@Todo.Id" />
+                <div class="mb-3">
+                    <label for="task" class="form-label">Task:</label>
+                    <InputText id="task" @bind-Value="Todo.Task" class="form-control" />
+                    <ValidationMessage For="() => Todo.Task" class="text-danger" />
+                </div>
+                <div class="mb-3">
+                    <label for="duedate" class="form-label">Due Date:</label>
+                    <InputDate id="duedate" @bind-Value="Todo.DueDate" class="form-control" />
+                    <ValidationMessage For="() => Todo.DueDate" class="text-danger" />
+                </div>
+                <div class="mb-3">
+                    <label for="creationtimestamp" class="form-label">Creation Timestamp:</label>
+                    <InputDate id="creationtimestamp" @bind-Value="Todo.CreationTimestamp" class="form-control" />
+                    <ValidationMessage For="() => Todo.CreationTimestamp" class="text-danger" />
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </EditForm>
+        </div>
+    </div>
+}
+
+<div>
+    <a href="/todos">Back to List</a>
+</div>
+
+@code {
+    [SupplyParameterFromQuery]
+    public int Id { get; set; }
+
+    [SupplyParameterFromForm]
+    public Todo? Todo { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Todo ??= await DB.TodoList.FirstOrDefaultAsync(m => m.Id == Id);
+
+        if (Todo is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+
+    // To protect from overposting attacks, enable the specific properties you want to bind to.
+    // For more details, see https://aka.ms/RazorPagesCRUD.
+    public async Task UpdateTodo()
+    {
+        DB.Attach(Todo!).State = EntityState.Modified;
+
+        try
+        {
+            await DB.SaveChangesAsync();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (!TodoExists(Todo!.Id))
+            {
+                NavigationManager.NavigateTo("notfound");
+            }
+            else
+            {
+                throw;
+            }
+        }
+
+        NavigationManager.NavigateTo("/todos");
+    }
+
+    bool TodoExists(int id)
+    {
+        return DB.TodoList.Any(e => e.Id == id);
+    }
+}
