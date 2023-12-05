@@ -1,5 +1,5 @@
 # Blazor To Do
-Blazor To Do is a to-do app based on the Blazor Web App template featuring .NET 8 and interactive server-side rendering (interactive SSR) using Blazor Server.
+Blazor To Do is a to-do app based on the Blazor Web App template featuring .NET 8's static server-side rendering (static SSR), streaming rendering, and enhanced navigation.
 
 ![image](https://github.com/k-f-m/blazor-to-do/assets/55965735/290c4aea-10e4-4643-9792-3a51a1315ee2)
 
