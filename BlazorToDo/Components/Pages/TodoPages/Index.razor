@@ -16,6 +16,7 @@
 <QuickGrid Class="table" Items="DB.TodoList">
     <PropertyColumn Property="todo => todo.Task" Sortable="true"/>
     <PropertyColumn Property="todo => todo.DueDate" Title="Due Date" Format="dd/MM/yyyy" Sortable="true" />
+    <PropertyColumn Property="todo => todo.Priority" Title="Priority" Sortable="true" />
     <PropertyColumn Property="todo => todo.CreationTimestamp" Title="Creation Date" Format="dd/MM/yyyy" Sortable="true" />
 
     <TemplateColumn Context="todo">
