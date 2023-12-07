@@ -32,6 +32,11 @@ else
                     <ValidationMessage For="() => Todo.DueDate" class="text-danger" />
                 </div>
                 <div class="mb-3">
+                    <label for="priority" class="form-label">Priority:</label>
+                    <InputText id="priority" @bind-Value="Todo.Priority" class="form-control" />
+                    <ValidationMessage For="() => Todo.Priority" class="text-danger" />
+                </div>
+                <div class="mb-3">
                     <label for="creationtimestamp" class="form-label">Creation Timestamp:</label>
                     <InputDate id="creationtimestamp" @bind-Value="Todo.CreationTimestamp" class="form-control" />
                     <ValidationMessage For="() => Todo.CreationTimestamp" class="text-danger" />

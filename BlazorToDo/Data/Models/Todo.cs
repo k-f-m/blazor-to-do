@@ -34,9 +34,11 @@ namespace BlazorToDo.Data.Models
         /// </summary>
         public DateTime? DueDate { get; set; }
 
+        /// <summary>
+        /// Gets or sets the priority for the to-do item.
+        /// </summary>
         [Required]
-        public PriorityLevel Priority { get; set; } = PriorityLevel.High;
-
+        public string Priority { get; set; } = PriorityLevel.High;
 
         /// <summary>
         /// Gets or sets the creation timestamp for the to-do item.

@@ -1,10 +1,9 @@
 ﻿namespace BlazorToDo.Data
 {
-    public enum PriorityLevel
+    public class PriorityLevel
     {
-        Low,
-        Medium,
-        High
+        public static string Low { get; } = "Low";
+        public static string Medium { get; } = "Medium";
+        public static string High { get; } = "High";
     }
-
 }

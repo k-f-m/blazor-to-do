@@ -1,6 +1,7 @@
 using BlazorToDo.Components;
 using BlazorToDo.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
