@@ -13,15 +13,18 @@
     <a href="todos/create">Create New</a>
 </p>
 
-<QuickGrid Class="table" Items="DB.TodoList">
-    <PropertyColumn Property="todo => todo.Task" Sortable="true"/>
-    <PropertyColumn Property="todo => todo.DueDate" Title="Due Date" Format="dd/MM/yyyy" Sortable="true" />
-    <PropertyColumn Property="todo => todo.Priority" Title="Priority" Sortable="true" />
-    <PropertyColumn Property="todo => todo.CreationTimestamp" Title="Creation Date" Format="dd/MM/yyyy" Sortable="true" />
+<QuickGrid Items="DB.TodoList">
+    <PropertyColumn Property="todo => todo.Task" Title="Task" Sortable="true" Align="Align.Left" />
+    <PropertyColumn Property="todo => todo.DueDate" Title="Due Date" Format="dd/MM/yyyy" Sortable="true" Align="Align.Left" />
+    <PropertyColumn Property="todo => todo.Priority" Title="Priority" Sortable="true" Align="Align.Left" />
+    <PropertyColumn Property="todo => todo.CreationTimestamp" Title="Creation Date" Format="dd/MM/yyyy" Sortable="true" Align="Align.Left" />
 
-    <TemplateColumn Context="todo">
+    <TemplateColumn Context="todo" Align="Align.Left">
         <a href="@($"todos/edit?id={todo.Id}")">Edit</a> |
         <a href="@($"todos/details?id={todo.Id}")">Details</a> |
         <a href="@($"todos/delete?id={todo.Id}")">Delete</a>
     </TemplateColumn>
 </QuickGrid>
+
+
+
