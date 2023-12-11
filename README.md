@@ -1,7 +1,7 @@
 # Blazor To Do
 Blazor To Do is a to-do app based on the Blazor Web App template featuring .NET 8's static server-side rendering (static SSR), streaming rendering, and enhanced navigation.
 
-![image](https://github.com/k-f-m/blazor-to-do/assets/55965735/290c4aea-10e4-4643-9792-3a51a1315ee2)
+![image](https://github.com/k-f-m/blazor-to-do/assets/55965735/ad3d2e56-0e90-4512-9c55-1b38d2a7ca8e)
 
 ## Project Configuration
 - Framework: .NET 8.0 LTS
