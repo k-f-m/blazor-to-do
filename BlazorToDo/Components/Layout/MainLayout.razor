@@ -6,8 +6,14 @@
     </div>
 
     <main>
-        <div class="top-row px-4">
-        </div>
+        <AuthorizeView>
+            <Authorized>
+                <div class="top-row px-4">
+                    <a href="https://localhost:7109/Account/Manage" target="_blank">@context.User.Identity?.Name</a>
+                </div>
+            </Authorized>
+        </AuthorizeView>
+
 
         <article class="content px-4">
             @Body

@@ -1,9 +1,16 @@
 ﻿@page "/todos"
+
 @rendermode InteractiveServer
+
 @using Microsoft.AspNetCore.Components.QuickGrid
-@inject BlazorToDo.Data.ApplicationDbContext DB
 @using BlazorToDo.Data.Models
+@using Microsoft.AspNetCore.Authorization
+
+@inject BlazorToDo.Data.ApplicationDbContext DB
+
 @attribute [StreamRendering]
+@attribute [Authorize]
+
 
 <PageTitle>To Do</PageTitle>
 

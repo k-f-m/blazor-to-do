@@ -2,11 +2,25 @@
 
 <PageTitle>Home</PageTitle>
 
-<h1>Blazor To Do</h1>
+<AuthorizeView>
+    <NotAuthorized>
+        <h1>Welcome to Blazor To Do!</h1>
+    </NotAuthorized>
+    <Authorized>
+        <h1>Hello @context.User.Identity?.Name!</h1>
+    </Authorized>
+</AuthorizeView>
 
-<p>Welcome to Blazor To Do app.</p> 
 <p>This application allows you to create and manage a to-do list.</p>
 
 <p>Use the side panel to navigate to the desired page.</p>
-    
-<p>To view or modify your to-do list, navigate to the To Do page.</p>
+
+<AuthorizeView>
+    <NotAuthorized>
+        <p>If you do not have an account yet, please feel free to create one!</p>
+        <p>After logging in, you can view or modify your to-do list by navigating to the To Do page.</p>
+    </NotAuthorized>
+    <Authorized>
+        <p>Please navigate to the To Do page to view or modify your to-do list.</p>
+    </Authorized>
+</AuthorizeView>
