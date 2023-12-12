@@ -20,7 +20,7 @@
     <a href="todos/create">Create New</a>
 </p>
 
-<QuickGrid Items="DB.TodoList">
+<QuickGrid Items="DB.TodoList" Class="quick-grid">
     <PropertyColumn Property="todo => todo.Task" Title="Task" Sortable="true" Align="Align.Left" />
     <PropertyColumn Property="todo => todo.DueDate" Title="Due Date" Format="dd/MM/yyyy" Sortable="true" Align="Align.Left" />
     <PropertyColumn Property="todo => todo.Priority" Title="Priority" Sortable="true" Align="Align.Left" />
