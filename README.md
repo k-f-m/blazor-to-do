@@ -3,7 +3,7 @@ Blazor To Do is a to-do app based on the Blazor Web App template featuring .NET 
 
 The application implements CRUD operations using Entity Framework Core via Microsoft SQL Server. Moreover, the app features authentication, and provides profile management capabilities.
 
-![image](https://github.com/k-f-m/blazor-to-do/assets/55965735/836e8783-69dd-48d8-b130-8641cff403bc)
+![image](https://github.com/k-f-m/blazor-to-do/assets/55965735/82638ca3-eba7-4801-9e28-5b5ca5fea245)
 
 ## Before authentication
 
