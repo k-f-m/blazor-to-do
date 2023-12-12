@@ -1,7 +1,21 @@
 # Blazor To Do
 Blazor To Do is a to-do app based on the Blazor Web App template featuring .NET 8's static server-side rendering (static SSR), streaming rendering, and enhanced navigation.
 
-![image](https://github.com/k-f-m/blazor-to-do/assets/55965735/ad3d2e56-0e90-4512-9c55-1b38d2a7ca8e)
+The application implements CRUD operations using Entity Framework Core via Microsoft SQL Server. Moreover, the app features authentication, and provides profile management capabilities.
+
+![image](https://github.com/k-f-m/blazor-to-do/assets/55965735/836e8783-69dd-48d8-b130-8641cff403bc)
+
+## Before Authentication
+
+![image](https://github.com/k-f-m/blazor-to-do/assets/55965735/3d6250c4-05f1-4ccb-8945-f2a74950397c)
+
+## After Authentication
+
+![image](https://github.com/k-f-m/blazor-to-do/assets/55965735/9407ebaf-b320-49c2-8fe2-17bdf1fe7640)
+
+## Managing Account Settings
+
+![image](https://github.com/k-f-m/blazor-to-do/assets/55965735/8cb3b02b-b50f-46bf-a4b2-a440eb2e70d4)
 
 ## Project Configuration
 - Framework: .NET 8.0 LTS
