@@ -5,19 +5,19 @@ The application implements CRUD operations using Entity Framework Core via Micro
 
 ![image](https://github.com/k-f-m/blazor-to-do/assets/55965735/836e8783-69dd-48d8-b130-8641cff403bc)
 
-## Before Authentication
+## Before authentication
 
 ![image](https://github.com/k-f-m/blazor-to-do/assets/55965735/3d6250c4-05f1-4ccb-8945-f2a74950397c)
 
-## After Authentication
+## After authentication
 
 ![image](https://github.com/k-f-m/blazor-to-do/assets/55965735/9407ebaf-b320-49c2-8fe2-17bdf1fe7640)
 
-## Managing Account Settings
+## Managing account settings
 
 ![image](https://github.com/k-f-m/blazor-to-do/assets/55965735/8cb3b02b-b50f-46bf-a4b2-a440eb2e70d4)
 
-## Project Configuration
+## Project configuration
 - Framework: .NET 8.0 LTS
 - Authentication type: None
 - Configure for HTTPS: True
